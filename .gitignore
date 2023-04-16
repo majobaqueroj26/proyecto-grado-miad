@@ -132,3 +132,5 @@ chromedriver/
 *.csv
 *.xlsx
 *.json
+
+.DS_Store
