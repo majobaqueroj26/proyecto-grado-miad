@@ -138,3 +138,6 @@ modelos/catboost_info/learn_error.tsv
 .gitignore
 modelos/catboost_info/time_left.tsv
 modelos/catboost_info/learn/events.out.tfevents
+
+catboost_info/*
+.idea/
