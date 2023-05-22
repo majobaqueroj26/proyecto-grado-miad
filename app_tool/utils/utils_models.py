@@ -13,7 +13,7 @@ from pycaret.regression import predict_model as pr
 
 
 
-@st.cache_data
+
 def norm_text(texto:str):
     texto = texto.lower()
     word_tokens = simple_preprocess(texto, deacc=True, min_len=1, max_len=40)

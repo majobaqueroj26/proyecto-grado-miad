@@ -105,14 +105,18 @@ if __name__ == "__main__":
                         'Report a bug': "https://github.com/njimenez92/proyecto-grado-miad/issues",
                         'About': """Esta Herramienta se realizo como proyecto de grado de la Mestría en 
                                 Inteligencia Analítica para la Toma de decisiones""" })
+    @st.cache
+    def load_models():
+        # Path model
+        model_path = pathlib.Path(__file__).parent / 'models'
+        # Load model
+        model_monto = load_model(f'{model_path}/lightgbm_model_monto_recomendado')
+        model_adicion = load_model(f'{model_path}/RFClassifier_adicion')
+        model_prorroga = load_model(f'{model_path}/xgboost_prorroga')
+        model_tiempo = load_model(f'{model_path}/lightgbm_tiempo_adicion')
+        return model_monto, model_adicion, model_prorroga, model_tiempo
     
-    # Path model
-    model_path = pathlib.Path(__file__).parent / 'models'
-    # Load model
-    model_monto = load_model(f'{model_path}/lightgbm_model_monto_recomendado')
-    model_adicion = load_model(f'{model_path}/RFClassifier_adicion')
-    model_prorroga = load_model(f'{model_path}/xgboost_prorroga')
-    model_tiempo = load_model(f'{model_path}/lightgbm_tiempo_adicion')
+    model_monto, model_adicion, model_prorroga, model_tiempo = load_models()
 
     # Imagen Portada
     proyect_path = pathlib.Path(__file__).parent.parent
