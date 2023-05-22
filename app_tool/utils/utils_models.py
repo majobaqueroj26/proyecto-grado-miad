@@ -8,7 +8,7 @@ from pycaret.regression import predict_model as pr
 
 
 
-@st.cache_data
+
 def norm_text(texto:str):
     texto = texto.lower()
     word_tokens = simple_preprocess(texto, deacc=True, min_len=1, max_len=40)
@@ -17,7 +17,7 @@ def norm_text(texto:str):
 
 
 
-@st.cache_data
+
 def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
     
     # convert dtype category
@@ -41,7 +41,7 @@ def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
 
     return data_scaler
 
-@st.cache_data
+
 def preprocess_data(features:dict, type:str)-> pd.DataFrame:
     # convert dict to dataframe
     features_df  = pd.DataFrame([features])
