@@ -22,7 +22,7 @@ def norm_text(texto:str):
 
 
 
-@st.cache_data
+
 def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
     
     # convert dtype category
@@ -47,7 +47,7 @@ def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
 
     return data_scaler
 
-@st.cache_data
+
 def preprocess_data(features:dict, type:str)-> pd.DataFrame:
     # convert dict to dataframe
     features_df  = pd.DataFrame([features])
