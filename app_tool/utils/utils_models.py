@@ -1,14 +1,19 @@
-import os 
+import os
+import sys
+import pathlib
+sys.path.append(
+    os.path.join(pathlib.Path(os.getcwd()))
+)
+import streamlit as st
 import pandas as pd
 from pickle import load
-import streamlit as st
 from gensim.utils import simple_preprocess
 from pycaret.classification import predict_model as pc
 from pycaret.regression import predict_model as pr
 
 
 
-
+@st.cache_data
 def norm_text(texto:str):
     texto = texto.lower()
     word_tokens = simple_preprocess(texto, deacc=True, min_len=1, max_len=40)
@@ -17,7 +22,7 @@ def norm_text(texto:str):
 
 
 
-
+@st.cache_data
 def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
     
     # convert dtype category
@@ -25,7 +30,8 @@ def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
     features_df['departamento_ejecucion'] = features_df['departamento_ejecucion'].astype('category')
     features_df['id_objeto_a_contratar'] = features_df['id_objeto_a_contratar'].astype('category')
     # normalice data
-    path = os.path.join(os.getcwd(),'app_tool', 'utils')
+    path = pathlib.Path(__file__).parent
+    #path = os.path.join(os.getcwd(),'app_tool', 'utils')
     if type == "monto":
         preprocessor = load(open(f'{path}/preprocessor_monto.pkl', 'rb'))
         data_scaler = preprocessor.transform(features_df)
@@ -41,7 +47,7 @@ def normalice_data(features_df:pd.DataFrame, type:str)-> pd.DataFrame:
 
     return data_scaler
 
-
+@st.cache_data
 def preprocess_data(features:dict, type:str)-> pd.DataFrame:
     # convert dict to dataframe
     features_df  = pd.DataFrame([features])
