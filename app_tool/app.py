@@ -48,7 +48,7 @@ def main(model_adicion,
     features_preprocess_tiempo = preprocess_data(features=features, type="tiempo")
 
     # Predictios Sections
-    title_image = Image.open(f"{proyect_path}/images/logo-inpec.png")
+    title_image = Image.open(f"{proyect_path}/img/logo-inpec.png")
     st.image(title_image)
 
     st.title("Herramienta de Predicción de Contratación Eficiente - INPEC")
