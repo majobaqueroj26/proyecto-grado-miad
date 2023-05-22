@@ -105,7 +105,7 @@ if __name__ == "__main__":
                         'Report a bug': "https://github.com/njimenez92/proyecto-grado-miad/issues",
                         'About': """Esta Herramienta se realizo como proyecto de grado de la Mestría en 
                                 Inteligencia Analítica para la Toma de decisiones""" })
-    @st.cache
+    @st.cache_resource
     def load_models():
         # Path model
         model_path = pathlib.Path(__file__).parent / 'models'
