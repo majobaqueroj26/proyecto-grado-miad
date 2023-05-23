@@ -152,17 +152,7 @@ def predict_adicion(model_adicion,
             result_monto = predict_monto['prediction_label'][0]
     else:
         result_prob_adicion = 1
-        if keras:
-            # Modelo de detección de monto estimado en días - Red Neuronal
-            input_test_press = np.asarray(dataframe_monto).astype(np.float32)
-            example_result = model_monto_keras.predict(input_test_press)
-            result_monto = math.ceil(float(example_result))
-        else:
-            # Modelo de detección de monto estimado en días - Machine Learning
-            predict_monto = pr(estimator=model_monto, 
-                            data=dataframe_monto,
-                            round=1)
-            result_monto = predict_monto['prediction_label'][0]
+        result_monto = 0
     return result_prob_adicion, result_monto
 
 

@@ -40,8 +40,8 @@ def main(model_adicion,
         cuantia_proceso = st.number_input('Cuantia del Proceso',step=100000)
         plazo_ejecucion_dias = st.slider('Plazo de Ejecución del Contrato',
                                         min_value=0,
-                                        max_value=2000,
-                                        step=30)
+                                        max_value=750,
+                                        step=1)
         id_objeto_a_contratar = st.selectbox('Id Objeto a Contratar', ('',10000000, 11000000, 12000000, 
                                                                        13000000, 14000000, 15000000, 20000000, 
                                                                        21000000, 22000000, 23000000, 24000000, 
@@ -116,8 +116,8 @@ def main(model_adicion,
             st.markdown('<h3 style="color:#005073;">Probabilidad de Adición Presupuestal</h2>', unsafe_allow_html=True)
             st.metric(label="Probabilidad de Adición",value=adicion, )
             # Predicción monto estimado
-            st.markdown('<h3 style="color:#e8702a;">Monto estimado del Contrato</h2>', unsafe_allow_html=True)
-            st.metric(label="Monto Estimado final",value=monto, )
+            st.markdown('<h3 style="color:#e8702a;">Monto de Adición Recomendado</h2>', unsafe_allow_html=True)
+            st.metric(label="Monto de Adición",value=monto, )
 
         with input_2:
             ##---------------------------predicciones tiempo---------------------------------------------------------------#
