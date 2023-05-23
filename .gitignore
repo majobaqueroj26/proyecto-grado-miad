@@ -141,3 +141,5 @@ modelos/catboost_info/learn/events.out.tfevents
 
 catboost_info/
 .idea/
+data/*
+
