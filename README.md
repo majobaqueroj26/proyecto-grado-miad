@@ -7,6 +7,7 @@ Este proyecto implementa una herramienta integral, tanto descriptiva como predic
 
 ## Tabla de contenido  
 - [Información general](#informacion_general)  
+- [Estructura del repositorio](#estructura) 
 - [Tecnologías](#tecnologias) 
 - [Ejecutar localmente](#ejecutarlocal)  
 - [Herramienta Descriptiva - Predictiva](#herramienta) 
@@ -25,6 +26,19 @@ La herramienta fue desarrollada como proyecto final de la Maestría en Inteligen
 5. **Streamlit Web App:** se implementó una aplicación web Streamlit para la visualización y ejecución de modelos encargados de realizar predicciones sobre las variables de interés.
 6. **Deploy Web App:** se ha desplegado una instancia de ``Cloud Run`` en la nube de Google Cloud Platform (GCP), la cual asumirá la responsabilidad de ejecutar la herramienta web a través de una URL pública. El objetivo de esta implementación es gestionar el servicio de manera más eficiente y simplificar su uso.
 7. **Desarrollo Herramienta:** la herramienta final se diseñó utilizando Looker Studio, donde se implementó un análisis descriptivo y se incorporó a una aplicación web de predicción.
+
+## Estructura del repositorio
+Este repositorio utiliza la siguiente estructura:
+* `/app_tool`: este directorio contiene el script principal y sus dependencias para la ejecución de la aplicación web de la herramienta predictiva.
+* `/data_extraction`: este directorio contiene los notebooks del proceso de extracción de los datos desde su fuente principal.
+* `/exploration_data`: este directorio contiene los notebooks del proceso de análisis exploratorio de los datos.
+*  `/img`: este directorio contiene imágenes utilizadas en la aplicación.
+* `/models`: este directorio contiene los notebooks de los modelos entrenados que se usan en este proyecto. Estos modelos incluyen los modelos LightGBM, XGBoost, Random Forest y Keras.
+* `/utils`: este directorio contiene los scripts necesarios para realizar la conexión, extracción y carga de dato a Big Query en Google Cloud.
+* `/validations`: este directorio contiene el notebooks del proceso de validación de la app web predictiva.
+* `/Dockerfile`: este archivo contiene instrucciones para que Docker cree la imagen, configure el entorno de Python, instale las dependencias requeridas e inicie la Aplicación Streamlit Web.
+* `/requirements.txt`: este archivo contiene todos los paquetes de Python que deben instalarse para ejecutar la aplicación.
+* `/.gitignore`: este archivo contiene la lista de archivos y directorios que están excluidos del repositorio de Git.
 
 ## Tecnologías
 El proyecto se creo con:
