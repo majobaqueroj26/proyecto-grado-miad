@@ -9,7 +9,7 @@ Este proyecto implementa una herramienta integral, tanto descriptiva como predic
 - [Información general](#informacion_general)  
 - [Tecnologías](#tecnologias) 
 - [Ejecutar localmente](#ejecutarlocal)  
-- [Herramienta final ](#herramienta) 
+- [Herramienta Descriptiva - Predictiva](#herramienta) 
 - [Autores](#autores) 
 - [Contacto](#contacto)
    
@@ -59,10 +59,11 @@ Inicie el localment el `App Streamlit`
   streamlit run app_tool/app.py
 ```
 
-## Herramienta final 
-El enlace a continuación lleva al tablero completo de la herramienta. Este tablero integra tanto elementos predictivos como descriptivos para proporcionar una visión completa y detallada del producto final.
+## Herramienta Descriptiva - Predictiva 
+El primer enlace a continuación lleva al tablero completo de la herramienta. Este tablero integra tanto elementos predictivos como descriptivos para proporcionar una visión completa y detallada del producto final. Y el segundo corresponde al ``Streamlit Web App`` en donde esta la herramienta de predicción de los modelos.
 
-- [Herramienta-Final](https://lookerstudio.google.com/u/0/reporting/bcc04777-e44e-47cb-95fa-492c884c6b4a/page/4HOOD)
+- [Herramienta-Final-Looker](https://lookerstudio.google.com/u/0/reporting/bcc04777-e44e-47cb-95fa-492c884c6b4a/page/4HOOD)
+- [Herramienta-Predictiva](https://app-inpec-xhzoorl2zq-uc.a.run.app/)
 
 ## Autores
 - [Natalia Jiménez](https://github.com/njimenez92)
