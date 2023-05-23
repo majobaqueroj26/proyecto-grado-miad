@@ -6,11 +6,12 @@
 Este proyecto implementa una herramienta integral, tanto descriptiva como predictiva, que optimiza la gestión de contratación dentro del INPEC. Esta herramienta ofrece una visualización comprensible del análisis descriptivo basado en el registro histórico del SECOP. Adicionalmente, dispone de una funcionalidad predictiva que estima la probabilidad de una adición presupuestaria, determina el monto recomendado para dicha adición, calcula la probabilidad de extensión del contrato y sugiere el número de días adecuados para una prórroga.
 
 ##### Table of Contents  
-[Información general](#informacion_general)  
-[Tecnologías](#tecnologias) 
-[Ejecutar localmente](#ejecutarlocal)  
-[Autores](#contacto) 
-[Contacto](#contacto)
+- [Información general](#informacion_general)  
+- [Tecnologías](#tecnologias) 
+- [Ejecutar localmente](#ejecutarlocal)  
+- [Herramienta final ](#herramienta) 
+- [Autores](#autores) 
+- [Contacto](#contacto)
    
 ## Información general
 ![](img/workflow.png)
