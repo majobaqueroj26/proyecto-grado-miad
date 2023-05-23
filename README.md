@@ -53,7 +53,7 @@ Instalar dependencias
   pip install -r requirements.txt
 ```
 
-Inicie el localment el `App Streamlit`
+Inicie localmente `App Streamlit`
 
 ```bash
   streamlit run app_tool/app.py
